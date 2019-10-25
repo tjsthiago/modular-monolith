@@ -13,6 +13,9 @@ class OrderServiceImpl implements OrderService{
 	
 	//private ProtectedComponent protectedComponent;
 	
+	//@Autowired
+	//private ProductMapper productMapper;
+	
 	@Override
 	public String doSomething() {
 		productService.doSomething();

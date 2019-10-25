@@ -6,6 +6,10 @@ class Product {
 	
 	private ProductOrder productOrder;
 
+	public Product() {
+		
+	}
+	
 	public Product(String name) {
 		this.name = name;
 	}

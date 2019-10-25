@@ -9,6 +9,9 @@ class ProductServiceImpl implements ProductService{
 	@Autowired
 	private ProtectedComponent protectedComponent;
 	
+	@Autowired
+	private ProductMapper productMapper;
+	
 	@Override
 	public void doSomething() {
 		protectedComponent.doSomething();
@@ -21,6 +24,13 @@ class ProductServiceImpl implements ProductService{
 		//Order order = new Order("");
 		
 		System.out.println("call ProductServiceImpl.doSomething()");
+	}
+
+	@Override
+	public ProductDTO getProduct() {
+		Product product = new Product("modularity product");
+		product.setProductOrder(new ProductOrder("modularity product order"));
+		return productMapper.toDTO(product);
 	}
 
 }

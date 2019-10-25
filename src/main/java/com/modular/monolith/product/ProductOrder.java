@@ -4,6 +4,10 @@ class ProductOrder {
 
 	private String description;
 	
+	public ProductOrder() {
+		
+	}
+	
 	public ProductOrder(String description) {
 		this.description = description;
 	}
